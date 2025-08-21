@@ -25,11 +25,11 @@
 
       .marquee-row {
         display: flex;
-        animation: marquee-left 30s linear infinite;
+        animation: marquee-left 60s linear infinite;
       }
 
       .marquee-row.reverse {
-        animation: marquee-right 30s linear infinite;
+        animation: marquee-right 60s linear infinite;
       }
 
       @keyframes marquee-left {
@@ -116,93 +116,66 @@
       .card-image-container:hover .card-image-overlay svg {
         transform: scale(1);
       }
-
-      .faq-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
-      }
-
-      .faq-content.open {
-        max-height: 500px; /* Nilai yang cukup besar untuk menampung konten */
-      }
-
-      .rotate-45 {
-        transform: rotate(45deg);
-      }
-
-      .icon-transition {
-        transition: transform 0.4s ease-in-out;
-      }
     </style>
   </head>
-  <body class="bg-white">
+  <body class="bg-[#F6F8FD]">
     <section id="alert-diskon" class="bg-[#12144d] py-3 lg:py-4 px-4 sm:px-6 lg:px-12 flex justify-between items-center text-white h-24">
       <div class="flex items-center gap-4">
-        <img src="http://googleusercontent.com/file_content/1" alt="Diskon Today's Sale" class="w-16 h-16" />
+        <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=64&h=64&fit=crop&crop=center" alt="Promo Today's Sale" class="w-16 h-16 rounded-full object-cover" />
         <div class="hidden md:block">
-          <p class="font-semibold text-sm lg:text-base">Hanya 5jt Jadi 500rb, hanya 3 hari saja.</p>
-          <p class="text-xs lg:text-sm text-gray-300 mt-1">Gunakan kode promo MERDEKA2025</p>
+          <p class="font-semibold text-sm lg:text-base">Promo Spesial! Beli 2 Lusin Gratis 6 Pcs, hanya hari ini.</p>
+          <p class="text-xs lg:text-sm text-gray-300 mt-1">Gunakan kode promo DIMSUM2025</p>
         </div>
       </div>
       <div class="flex items-center gap-4">
         <div class="items-center gap-2 hidden lg:flex">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="12" fill="#2447F9"/>
+          <path d="M7 12L10.1579 15L17 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span class="text-sm">Akses kelas selamanya</span>
+          <span class="text-sm">Delivery ke seluruh Jakarta</span>
         </div>
-        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 ring-2 ring-transparent hover:ring-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400"> Ambil Promo </a>
+        <a href="#" class="bg-[#2447f9] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:ring-2 hover:ring-blue-600"> Order Sekarang </a>
       </div>
     </section>
 
     <nav id="navbar" class="top-0 left-0 w-full z-50 transition-all duration-500 py-4 px-4 sm:px-6 lg:px-12">
       <div class="flex justify-between items-center h-16">
-        <div>
-          <img src="http://googleusercontent.com/file_content/2" alt="BuildWithAngga Logo" class="h-10 sm:h-12" />
-        </div>
+        <a href="#" class="shrink-0 cursor-pointer">
+          <img src="https://plus.unsplash.com/premium_photo-1668902224017-4b131fe72ffd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Golden Dragon Dimsum Logo" class="h-10 sm:h-12 rounded-full object-cover" />
+        </a>
 
         <div class="hidden lg:flex items-center gap-8 text-gray-600">
-          <a href="#" class="hover:text-blue-500 transition-colors duration-300">Flash Sale</a>
-          <a href="#" class="hover:text-blue-500 transition-colors duration-300">Patungan</a>
+          <a href="#" class="hover:text-blue-500 transition-colors duration-300">Menu Spesial</a>
+          <a href="#" class="hover:text-blue-500 transition-colors duration-300">Paket Hemat</a>
 
-          <div class="relative group">
             <button class="flex items-center gap-1 hover:text-blue-500 transition-colors duration-300 group-hover:text-blue-500">
-              Kelas
+              Menu
               <svg class="h-4 w-4 transform group-hover:rotate-180 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </button>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Web Development</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">UI/UX Design</a>
-            </div>
-          </div>
+            
 
-          <div class="relative group">
             <button class="flex items-center gap-1 hover:text-blue-500 transition-colors duration-300 group-hover:text-blue-500">
-              Alur Belajar
+              Cabang
               <svg class="h-4 w-4 transform group-hover:rotate-180 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </button>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Front-End Developer</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Back-End Developer</a>
-            </div>
-          </div>
+            
 
-          <a href="#" class="hover:text-blue-500 transition-colors duration-300">Tips Terbaru</a>
+          <a href="#" class="hover:text-blue-500 transition-colors duration-300">Tentang Kami</a>
         </div>
 
         <div class="flex items-center gap-4">
-          <button id="search-button" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-300">
-            <svg class="h-5 w-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+          <button id="search-button" class="p-[10px] rounded-full bg-gray-100 bg-gray-200 hover:bg-gray-300 transition-colors duration-300">
+            <svg class="h-6 w-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
             </svg>
           </button>
-          <a href="#" class="hidden sm:inline-block bg-gray-200 text-gray-700 font-medium py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300"> Sign Up </a>
-          <a href="#" class="hidden sm:inline-block bg-blue-600 text-white font-medium py-2 px-6 rounded-full hover:bg-blue-700 transition-colors duration-300"> Sign In </a>
+          <a href="#" class="hidden cursor-pointer sm:inline-block bg-gray-200 text-gray-700 font-medium py-3 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300"> Reservasi </a>
+          <a href="#" class="bg-[#2447f9] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:ring-2 hover:ring-blue-600"> Order Online </a>
         </div>
 
         <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -213,131 +186,131 @@
       </div>
     </nav>
 
-    <header class="py-20 px-4 sm:px-6 lg:px-12 bg-white">
+    <header class="py-20 px-4 sm:px-6 lg:px-12">
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         <div class="lg:w-1/2 text-center lg:text-left">
-          <p class="text-green-500 font-semibold text-lg">#SpiritOfLearning</p>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mt-2">
-            Your Dream Career <br />
-            Starts With Us
+          <p class="text-green-500 font-semibold text-lg">#AutentikChineseDimsum</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[60px] text-[#34364A] mt-2">
+            Nikmati Kelezatan <br />
+            Dimsum Terbaik Jakarta
           </h1>
           <p class="mt-6 text-gray-600 text-lg">
-            BuildWithAngga menyediakan kelas UI/UX design, Web <br class="hidden sm:block" />
-            Development, dan Freelancer untuk pemula.
+            Golden Dragon Dimsum menyajikan dimsum autentik dengan <br class="hidden sm:block" />
+            cita rasa tradisional China yang telah dipercaya sejak 1995.
           </p>
           <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#" class="bg-blue-600 text-white font-medium py-3 px-8 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"> Alur Belajar </a>
-            <a href="#" class="bg-gray-200 text-gray-700 font-medium py-3 px-8 rounded-full hover:bg-gray-300 transition-colors duration-300"> Panduan Karir </a>
+            <a href="#" class="bg-[#2447f9] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:ring-2 hover:ring-blue-600"> Lihat Menu </a>
+            <a href="#" class="bg-gray-200 text-gray-700 font-medium py-3 px-8 rounded-full hover:bg-gray-300 transition-colors duration-300"> Lokasi Cabang </a>
           </div>
         </div>
 
         <div class="lg:w-1/2 relative mt-12 lg:mt-0">
-          <img src="http://googleusercontent.com/file_content/3" alt="Hero Image" class="w-full rounded-3xl shadow-2xl" />
-          <img src="https://i.ibb.co/68nL5V3/Screenshot-2025-08-19-112313-buildwithangga.png" alt="Overlay Image 1" class="absolute -top-10 -left-10 w-40 rounded-2xl shadow-xl hidden sm:block" />
-          <img src="https://i.ibb.co/3pYkG4p/Screenshot-2025-08-19-112411-buildwithangga.png" alt="Overlay Image 2" class="absolute -bottom-10 -right-10 w-40 rounded-2xl shadow-xl hidden sm:block" />
+          <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=600&h=400&fit=crop&crop=center" alt="Dimsum Hero Image" class="w-full rounded-[70px] shadow-2xl object-cover" />
+          <img src="https://plus.unsplash.com/premium_photo-1674601033631-79eeffaac6f9?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Siomay" class="absolute -top-10 -left-10 w-40 h-40 rounded-2xl shadow-xl hidden sm:block object-cover" />
+          <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=160&h=160&fit=crop&crop=center" alt="Hakau" class="absolute -bottom-10 -right-10 w-40 h-40 rounded-2xl shadow-xl hidden sm:block object-cover" />
         </div>
       </div>
     </header>
 
-    <section class="py-20 px-4 sm:px-6 lg:px-12 bg-[#f7f7f7] text-center">
+     <section class="py-20 px-4 sm:px-6 lg:px-12 text-center">
       <div class="container mx-auto">
-        <span class="inline-block bg-blue-100 text-blue-600 text-sm font-medium px-4 py-1 rounded-full mb-4"> Mengikuti Jejak Orang Sukses </span>
+        <span class="inline-block bg-blue-100 text-[#2447f9] text-sm font-semibold px-4 py-1 rounded-full mb-4"> Dipercaya Ribuan Pelanggan </span>
 
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-800 mb-12">
-          Alumni BuildWithAngga Bekerja Pada <br class="hidden sm:block" />
-          Perusahaan Besar dan Terkenal
+        <h2 class="text-3xl sm:text-3xl font-bold text-gray-800 mb-12">
+          Golden Dragon Dimsum Tersedia di <br class="hidden sm:block" />
+          Platform dan Lokasi Terpercaya
         </h2>
 
         <div class="flex flex-wrap justify-center items-center gap-6">
           <div class="flex flex-wrap justify-center items-center gap-6 mb-6">
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/C07Bf5L/bca-logo.png" alt="Logo BCA" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=80&h=40&fit=crop&crop=center" alt="GoFood" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/3s6FzGj/j-t-logo.png" alt="Logo J&T Express" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=80&h=40&fit=crop&crop=center" alt="GrabFood" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/sKq1b9P/tokopedia-logo.png" alt="Logo Tokopedia" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=80&h=40&fit=crop&crop=center" alt="ShopeeFood" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/wzn2w5b/tiketcom-logo.png" alt="Logo tiket.com" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=80&h=40&fit=crop&crop=center" alt="FoodPanda" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/g42j8sC/kawan-lama-logo.png" alt="Logo Kawan Lama Group" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=80&h=40&fit=crop&crop=center" alt="Mall Taman Anggrek" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/5cQ315p/traveloka-logo.png" alt="Logo Traveloka" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=80&h=40&fit=crop&crop=center" alt="Grand Indonesia" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/k9b657V/grab-logo.png" alt="Logo Grab" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=80&h=40&fit=crop&crop=center" alt="Plaza Senayan" class="max-w-full max-h-full object-contain" />
             </div>
           </div>
           <div class="flex flex-wrap justify-center items-center gap-6">
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/mCb2t1g/bluebird-logo.png" alt="Logo Bluebird" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=80&h=40&fit=crop&crop=center" alt="Central Park" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/wz03qgL/telkomsel-logo.png" alt="Logo Telkomsel" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=80&h=40&fit=crop&crop=center" alt="Pondok Indah Mall" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <img src="https://i.ibb.co/wJm8n7G/bank-dki-logo.png" alt="Logo Bank DKI" class="max-w-full max-h-full" />
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=80&h=40&fit=crop&crop=center" alt="Kelapa Gading Mall" class="max-w-full max-h-full object-contain" />
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-md w-36 h-20 flex items-center justify-center">
-              <span class="text-gray-500 font-semibold">30+ More</span>
+            <div class="bg-white p-4 rounded-xl shadow-xs w-36 h-20 flex items-center justify-center">
+              <span class="text-gray-500 font-semibold">10+ Cabang</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 lg:px-12 bg-white text-center">
+   <section class="py-20 px-4 sm:px-6 lg:px-12 text-center">
       <div class="container mx-auto">
-        <p class="text-green-500 font-semibold mb-2">Start Learning Today</p>
+        <p class="text-green-500 font-semibold mb-2 text-start">Specialty Menu</p>
 
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-800 mb-12">
-          Kelas Online Design, <br class="hidden sm:block" />
-          Development, dan Freelancer
+        <h2 class="text-3xl sm:text-3xl font-bold text-gray-800 mb-12 text-start">
+          Menu Andalan Golden Dragon, <br class="hidden sm:block" />
+          Dimsum Autentik & Premium
         </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start text-left relative">
-            <img src="https://i.ibb.co/6y18r6f/choose-roadmap.png" alt="Icon Pilih Roadmap" class="w-16 h-16 rounded-full mb-4" />
+          <div class="bg-white p-6 rounded-3xl bg-white flex flex-col justify-between items-start text-left relative">
+            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=64&h=64&fit=crop&crop=center" alt="Siomay Ayam" class="w-16 h-16 rounded-full mb-4 object-cover" />
             <div>
-              <h3 class="font-bold text-xl mb-1">Pilih Roadmap</h3>
-              <p class="text-gray-500 text-sm">Alur belajar terbaik</p>
+              <h3 class="font-bold text-xl mb-1">Siomay Ayam</h3>
+              <p class="text-gray-500 text-sm">Dimsum kukus tradisional</p>
             </div>
             <svg class="h-6 w-6 text-gray-400 absolute bottom-6 right-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </div>
 
-          <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start text-left relative">
-            <img src="https://i.ibb.co/JmW317X/design-class.png" alt="Icon Kelas Design" class="w-16 h-16 rounded-full mb-4" />
+          <div class="bg-white p-6 rounded-3xl bg-white flex flex-col justify-between items-start text-left relative">
+            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=64&h=64&fit=crop&crop=center" alt="Hakau Udang" class="w-16 h-16 rounded-full mb-4 object-cover" />
             <div>
-              <h3 class="font-bold text-xl mb-1">Kelas Design</h3>
-              <p class="text-gray-500 text-sm">UI/UX & Graphic Design</p>
+              <h3 class="font-bold text-xl mb-1">Hakau Udang</h3>
+              <p class="text-gray-500 text-sm">Dimsum udang premium</p>
             </div>
             <svg class="h-6 w-6 text-gray-400 absolute bottom-6 right-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </div>
 
-          <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start text-left relative">
-            <img src="https://i.ibb.co/YyY4D9d/coding-class.png" alt="Icon Kelas Koding" class="w-16 h-16 rounded-full mb-4" />
+          <div class="bg-white p-6 rounded-3xl bg-white flex flex-col justify-between items-start text-left relative">
+            <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=64&h=64&fit=crop&crop=center" alt="Lumpia Goreng" class="w-16 h-16 rounded-full mb-4 object-cover" />
             <div>
-              <h3 class="font-bold text-xl mb-1">Kelas Koding</h3>
-              <p class="text-gray-500 text-sm">Bikin Website & Aplikasi</p>
+              <h3 class="font-bold text-xl mb-1">Lumpia Goreng</h3>
+              <p class="text-gray-500 text-sm">Dimsum goreng crispy</p>
             </div>
             <svg class="h-6 w-6 text-gray-400 absolute bottom-6 right-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </div>
 
-          <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start text-left relative">
-            <img src="https://i.ibb.co/3Wf4j6z/soft-skills.png" alt="Icon Perdalam Soft Skills" class="w-16 h-16 rounded-full mb-4" />
+          <div class="bg-white p-6 rounded-3xl bg-white flex flex-col justify-between items-start text-left relative">
+            <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=64&h=64&fit=crop&crop=center" alt="Bao Char Siu" class="w-16 h-16 rounded-full mb-4 object-cover" />
             <div>
-              <h3 class="font-bold text-xl mb-1">Perdalam Soft Skills</h3>
-              <p class="text-gray-500 text-sm">Improve your business</p>
+              <h3 class="font-bold text-xl mb-1">Bao Char Siu</h3>
+              <p class="text-gray-500 text-sm">Bakpao daging barbekyu</p>
             </div>
             <svg class="h-6 w-6 text-gray-400 absolute bottom-6 right-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -347,80 +320,85 @@
       </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 lg:px-12 bg-white">
-      <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+  <section class="py-20 px-4 sm:px-6 lg:px-12">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
         <div class="lg:w-1/2 relative mt-12 lg:mt-0">
-          <img src="http://googleusercontent.com/file_content/6" alt="Hero Image" class="w-full rounded-3xl shadow-2xl" />
-          <img src="https://i.ibb.co/L5hYhB4/privileges-1.png" alt="Overlay Image 1" class="absolute -top-10 -left-10 w-40 rounded-2xl shadow-xl hidden sm:block" />
-          <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Overlay Image 2" class="absolute -top-10 -right-10 w-40 rounded-2xl shadow-xl hidden sm:block" />
-          <img src="https://i.ibb.co/n6v36d1/privileges-3.png" alt="Overlay Image 3" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-48 rounded-2xl shadow-xl hidden sm:block" />
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center" alt="Restaurant Interior" class="w-full rounded-[70px] shadow-sm object-cover" />
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=160&h=160&fit=crop&crop=center" alt="Fresh Ingredients" class="absolute -top-10 -left-10 w-40 h-40 rounded-2xl shadow-xl hidden sm:block object-cover" />
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=160&h=160&fit=crop&crop=center" alt="Chef Cooking" class="absolute -top-10 -right-10 w-40 h-40 rounded-2xl shadow-xl hidden sm:block object-cover" />
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=192&h=192&fit=crop&crop=center" alt="Happy Customer" class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 w-48 h-28 rounded-2xl shadow-xl hidden sm:block object-cover" />
         </div>
 
         <div class="lg:w-1/2 text-center lg:text-left">
-          <p class="text-green-500 font-semibold text-lg">You Deserve Better Career</p>
+          <p class="text-green-500 font-semibold text-lg">Why Choose Golden Dragon</p>
 
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-800 mt-2 mb-8">
-            Privileges Dari BuildWithAngga <br class="hidden sm:block" />
-            Karir Semakin Tumbuh
+          <h2 class="text-3xl sm:text-3xl font-bold text-gray-800 mt-2 mb-8">
+            Keunggulan Golden Dragon <br class="hidden sm:block" />
+            Dimsum Terpercaya
           </h2>
 
           <ul class="space-y-4 text-left inline-block lg:inline-block">
             <li class="flex items-center">
-              <span class="inline-block p-1 rounded-full bg-green-100 mr-3">
-                <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              <span class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#DEF6EE"/>
+                <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              Akses BuildWithAngga selamanya
+              Resep autentik turun temurun sejak 1995
             </li>
             <li class="flex items-center">
-              <span class="inline-block p-1 rounded-full bg-green-100 mr-3">
-                <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              <span class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#DEF6EE"/>
+                <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              Free materi update kelas
+              Bahan segar berkualitas premium
             </li>
             <li class="flex items-center">
-              <span class="inline-block p-1 rounded-full bg-green-100 mr-3">
-                <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              <span class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#DEF6EE"/>
+                <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              Real-world projects Freelancer
+              Chef berpengalaman dari Hong Kong
             </li>
             <li class="flex items-center">
-              <span class="inline-block p-1 rounded-full bg-green-100 mr-3">
-                <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              <span class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#DEF6EE"/>
+                <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              Forum UI/UX design & Web Development
+              Delivery cepat ke seluruh Jakarta
             </li>
             <li class="flex items-center">
-              <span class="inline-block p-1 rounded-full bg-green-100 mr-3">
-                <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              <span class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#DEF6EE"/>
+                <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              Privileges kelas online lainnya
+              Harga terjangkau untuk semua kalangan
             </li>
           </ul>
 
           <div class="mt-8 flex justify-center lg:justify-start">
-            <a href="#" class="bg-blue-600 text-white font-medium py-3 px-10 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"> Join Now </a>
+            <a href="#" class="bg-[#2447f9] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:ring-2 hover:ring-blue-600"> Order Sekarang </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 lg:px-12 bg-white text-center">
-      <div class="container mx-auto">
-        <p class="text-green-500 font-semibold mb-2">Mastering Freelancer Tools</p>
+   <section class="py-20 text-center">
+      <div>
+        <p class="text-green-500 font-semibold mb-2">Signature Collection</p>
 
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-800 mb-12">
-          Kelas Online BuildWithAngga. <br class="hidden sm:block" />
-          Materi Paling Update.
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">
+          Menu Terlaris Golden Dragon. <br class="hidden sm:block" />
+          Cita Rasa Autentik Terbaik.
         </h2>
 
         <div class="space-y-6">
@@ -428,90 +406,146 @@
             <div class="marquee-wrapper">
               <div class="marquee-row">
                 <div class="flex-shrink-0 flex gap-6 pr-6">
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/3s8R47f/vue-logo.png" alt="Vue Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Vue</h3>
-                      <p class="text-gray-500 text-sm">Front-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Siomay" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Siomay</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Kukus Tradisional</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/Y2B5V3n/flutter-logo.png" alt="Flutter Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Flutter</h3>
-                      <p class="text-gray-500 text-sm">Mobile Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=40&h=40&fit=crop&crop=center" alt="Hakau" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Hakau</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Udang Premium</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/hK8bQfJ/python-logo.png" alt="Python Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Python</h3>
-                      <p class="text-gray-500 text-sm">Data Science</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=40&h=40&fit=crop&crop=center" alt="Lumpia" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Lumpia</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Goreng Crispy</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/680t16f/laravel-logo.png" alt="Laravel Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Laravel</h3>
-                      <p class="text-gray-500 text-sm">Back-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=40&h=40&fit=crop&crop=center" alt="Bakpao" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Bakpao</h3>
+                      <p class="text-gray-500 text-sm">Bakpao Char Siu</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/y4L2c4x/figma-logo.png" alt="Figma Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Figma</h3>
-                      <p class="text-gray-500 text-sm">UI/UX Design</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Pangsit" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Pangsit</h3>
+                      <p class="text-gray-500 text-sm">Pangsit Rebus/Goreng</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/3s8R47f/vue-logo.png" alt="Vue Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Vue</h3>
-                      <p class="text-gray-500 text-sm">Front-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Siomay" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Siomay</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Kukus Tradisional</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=40&h=40&fit=crop&crop=center" alt="Lumpia" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Lumpia</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Goreng Crispy</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=40&h=40&fit=crop&crop=center" alt="Bakpao" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Bakpao</h3>
+                      <p class="text-gray-500 text-sm">Bakpao Char Siu</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Pangsit" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Pangsit</h3>
+                      <p class="text-gray-500 text-sm">Pangsit Rebus/Goreng</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Siomay" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Siomay</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Kukus Tradisional</p>
                     </div>
                   </div>
                 </div>
                 <div class="flex-shrink-0 flex gap-6 pr-6">
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/3s8R47f/vue-logo.png" alt="Vue Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Vue</h3>
-                      <p class="text-gray-500 text-sm">Front-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Siomay" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Siomay</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Kukus Tradisional</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/Y2B5V3n/flutter-logo.png" alt="Flutter Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Flutter</h3>
-                      <p class="text-gray-500 text-sm">Mobile Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=40&h=40&fit=crop&crop=center" alt="Hakau" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Hakau</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Udang Premium</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/hK8bQfJ/python-logo.png" alt="Python Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Python</h3>
-                      <p class="text-gray-500 text-sm">Data Science</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=40&h=40&fit=crop&crop=center" alt="Lumpia" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Lumpia</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Goreng Crispy</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/680t16f/laravel-logo.png" alt="Laravel Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Laravel</h3>
-                      <p class="text-gray-500 text-sm">Back-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=40&h=40&fit=crop&crop=center" alt="Bakpao" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Bakpao</h3>
+                      <p class="text-gray-500 text-sm">Bakpao Char Siu</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/y4L2c4x/figma-logo.png" alt="Figma Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Figma</h3>
-                      <p class="text-gray-500 text-sm">UI/UX Design</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Pangsit" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Pangsit</h3>
+                      <p class="text-gray-500 text-sm">Pangsit Rebus/Goreng</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/3s8R47f/vue-logo.png" alt="Vue Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Vue</h3>
-                      <p class="text-gray-500 text-sm">Front-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Siomay" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Siomay</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Kukus Tradisional</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=40&h=40&fit=crop&crop=center" alt="Lumpia" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Lumpia</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Goreng Crispy</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=40&h=40&fit=crop&crop=center" alt="Bakpao" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Bakpao</h3>
+                      <p class="text-gray-500 text-sm">Bakpao Char Siu</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Pangsit" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Pangsit</h3>
+                      <p class="text-gray-500 text-sm">Pangsit Rebus/Goreng</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=40&h=40&fit=crop&crop=center" alt="Siomay" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Siomay</h3>
+                      <p class="text-gray-500 text-sm">Dimsum Kukus Tradisional</p>
                     </div>
                   </div>
                 </div>
@@ -522,91 +556,147 @@
           <div class="marquee-container">
             <div class="marquee-wrapper">
               <div class="marquee-row reverse">
-                <div class="flex-shrink-0 flex gap-6 pr-6">
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/zXJ0xQW/excel-logo.png" alt="Excel Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Excel</h3>
-                      <p class="text-gray-500 text-sm">Data Analysis</p>
+                <div class="flex-shrink-0 flex gap-6 pr-6 py-2">
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=40&h=40&fit=crop&crop=center" alt="Teh Chinese" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Teh Oolong</h3>
+                      <p class="text-gray-500 text-sm">Traditional Chinese Tea</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/p3q8sR8/react-logo.png" alt="React JS Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">React JS</h3>
-                      <p class="text-gray-500 text-sm">Front-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=40&h=40&fit=crop&crop=center" alt="Kwetiau" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Kwetiau</h3>
+                      <p class="text-gray-500 text-sm">Mie Kwetiau Siram</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/c18D5C1/kotlin-logo.png" alt="Kotlin Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Kotlin</h3>
-                      <p class="text-gray-500 text-sm">Android Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=40&h=40&fit=crop&crop=center" alt="Sup Asparagus" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Soup</h3>
+                      <p class="text-gray-500 text-sm">Sup Asparagus Kepiting</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/bF9c11X/golang-logo.png" alt="Golang Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Golang</h3>
-                      <p class="text-gray-500 text-sm">Back-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=40&h=40&fit=crop&crop=center" alt="Nasi Goreng" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Nasi Goreng</h3>
+                      <p class="text-gray-500 text-sm">Nasi Goreng Hongkong</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/M9B2G2d/blender-logo.png" alt="Blender Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Blender</h3>
-                      <p class="text-gray-500 text-sm">3D UI Design</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=40&h=40&fit=crop&crop=center" alt="Dessert" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Dessert</h3>
+                      <p class="text-gray-500 text-sm">Mango Pudding</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/zXJ0xQW/excel-logo.png" alt="Excel Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Excel</h3>
-                      <p class="text-gray-500 text-sm">Data Analysis</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=40&h=40&fit=crop&crop=center" alt="Teh Chinese" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Teh Oolong</h3>
+                      <p class="text-gray-500 text-sm">Traditional Chinese Tea</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=40&h=40&fit=crop&crop=center" alt="Sup Asparagus" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Soup</h3>
+                      <p class="text-gray-500 text-sm">Sup Asparagus Kepiting</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=40&h=40&fit=crop&crop=center" alt="Nasi Goreng" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Nasi Goreng</h3>
+                      <p class="text-gray-500 text-sm">Nasi Goreng Hongkong</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=40&h=40&fit=crop&crop=center" alt="Dessert" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Dessert</h3>
+                      <p class="text-gray-500 text-sm">Mango Pudding</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=40&h=40&fit=crop&crop=center" alt="Teh Chinese" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Teh Oolong</h3>
+                      <p class="text-gray-500 text-sm">Traditional Chinese Tea</p>
                     </div>
                   </div>
                 </div>
                 <div class="flex-shrink-0 flex gap-6 pr-6">
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/zXJ0xQW/excel-logo.png" alt="Excel Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Excel</h3>
-                      <p class="text-gray-500 text-sm">Data Analysis</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=40&h=40&fit=crop&crop=center" alt="Teh Chinese" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Teh Oolong</h3>
+                      <p class="text-gray-500 text-sm">Traditional Chinese Tea</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/p3q8sR8/react-logo.png" alt="React JS Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">React JS</h3>
-                      <p class="text-gray-500 text-sm">Front-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=40&h=40&fit=crop&crop=center" alt="Kwetiau" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Kwetiau</h3>
+                      <p class="text-gray-500 text-sm">Mie Kwetiau Siram</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/c18D5C1/kotlin-logo.png" alt="Kotlin Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Kotlin</h3>
-                      <p class="text-gray-500 text-sm">Android Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=40&h=40&fit=crop&crop=center" alt="Sup Asparagus" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Soup</h3>
+                      <p class="text-gray-500 text-sm">Sup Asparagus Kepiting</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/bF9c11X/golang-logo.png" alt="Golang Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Golang</h3>
-                      <p class="text-gray-500 text-sm">Back-End Development</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=40&h=40&fit=crop&crop=center" alt="Nasi Goreng" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Nasi Goreng</h3>
+                      <p class="text-gray-500 text-sm">Nasi Goreng Hongkong</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/M9B2G2d/blender-logo.png" alt="Blender Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Blender</h3>
-                      <p class="text-gray-500 text-sm">3D UI Design</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=40&h=40&fit=crop&crop=center" alt="Dessert" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Dessert</h3>
+                      <p class="text-gray-500 text-sm">Mango Pudding</p>
                     </div>
                   </div>
-                  <div class="w-64 bg-white p-6 rounded-3xl shadow-lg flex items-center justify-center gap-4">
-                    <img src="https://i.ibb.co/zXJ0xQW/excel-logo.png" alt="Excel Logo" class="h-10" />
-                    <div class="text-left">
-                      <h3 class="font-bold text-lg">Excel</h3>
-                      <p class="text-gray-500 text-sm">Data Analysis</p>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=40&h=40&fit=crop&crop=center" alt="Teh Chinese" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Teh Oolong</h3>
+                      <p class="text-gray-500 text-sm">Traditional Chinese Tea</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=40&h=40&fit=crop&crop=center" alt="Sup Asparagus" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Soup</h3>
+                      <p class="text-gray-500 text-sm">Sup Asparagus Kepiting</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=40&h=40&fit=crop&crop=center" alt="Nasi Goreng" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Nasi Goreng</h3>
+                      <p class="text-gray-500 text-sm">Nasi Goreng Hongkong</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=40&h=40&fit=crop&crop=center" alt="Dessert" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Dessert</h3>
+                      <p class="text-gray-500 text-sm">Mango Pudding</p>
+                    </div>
+                  </div>
+                  <div class="w-64 bg-white p-6 rounded-3xl flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=40&h=40&fit=crop&crop=center" alt="Teh Chinese" class="h-[70px] w-[70px] rounded-full object-cover" />
+                    <div class="text-left text-wrap">
+                      <h3 class="font-bold text-lg">Teh Oolong</h3>
+                      <p class="text-gray-500 text-sm">Traditional Chinese Tea</p>
                     </div>
                   </div>
                 </div>
@@ -617,17 +707,17 @@
       </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 lg:px-12 bg-gray-100">
+  <section class="py-20 px-4 sm:px-6 lg:px-12">
       <div class="container mx-auto">
-        <div class="relative bg-[#0c0c2e] text-white p-8 md:p-12 lg:p-16 rounded-3xl overflow-hidden shadow-2xl">
-          <div class="absolute inset-0 z-0 opacity-10" style="background: radial-gradient(ellipse at 15% 15%, rgba(255, 255, 255, 0.2), transparent), radial-gradient(ellipse at 85% 85%, rgba(255, 255, 255, 0.1), transparent)"></div>
+        <div class="relative bg-[#0c0c2e] text-white px-8 md:px-12 lg:px-16 rounded-[30px] shadow-2xl">
+          <img src="Ellipse.svg" alt="icon" class="size-[294px] shrink-0 absolute top-0 left-[300px]" />
 
           <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div class="lg:w-1/2 text-center lg:text-left">
-              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">Gabung Kelas Gratis, Perkuat Fundamental Skills</h2>
-              <p class="mt-4 text-gray-300 text-sm sm:text-base">Mentor expert kami juga telah menyediakan ratusan kelas gratis yang bisa kamu pelajari sekarang</p>
+              <h2 class="text-3xl font-bold">Nikmati Promo Spesial, Rasakan <br> Kelezatan Autentik</h2>
+              <p class="mt-4 text-gray-300 text-sm sm:text-base">Chef berpengalaman kami telah menyiapkan berbagai menu promo menarik yang bisa Anda nikmati sekarang</p>
               <div class="mt-8 flex justify-center lg:justify-start">
-                <a href="#" class="bg-blue-600 text-white font-medium py-3 px-8 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"> Lihat Kelas Gratis Popular </a>
+                <a href="#" class="bg-[#2447f9] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:ring-2 hover:ring-blue-600"> Lihat Menu Promo </a>
               </div>
             </div>
 
@@ -635,16 +725,16 @@
               <div class="marquee-container-v w-1/2">
                 <div class="marquee-wrapper-v">
                   <div class="flex-shrink-0 flex flex-col gap-4">
-                    <img src="https://i.ibb.co/L5hYhB4/privileges-1.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/m0fW02T/privileges-4.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/hC82f8X/privileges-5.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=150&fit=crop&crop=center" alt="Dimsum Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=150&fit=crop&crop=center" alt="Hakau Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=200&h=150&fit=crop&crop=center" alt="Lumpia Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=200&h=150&fit=crop&crop=center" alt="Bakpao Menu" class="w-full rounded-2xl object-cover" />
                   </div>
                   <div class="flex-shrink-0 flex flex-col gap-4">
-                    <img src="https://i.ibb.co/L5hYhB4/privileges-1.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/m0fW02T/privileges-4.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/hC82f8X/privileges-5.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=150&fit=crop&crop=center" alt="Dimsum Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=150&fit=crop&crop=center" alt="Hakau Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=200&h=150&fit=crop&crop=center" alt="Lumpia Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=200&h=150&fit=crop&crop=center" alt="Bakpao Menu" class="w-full rounded-2xl object-cover" />
                   </div>
                 </div>
               </div>
@@ -652,16 +742,16 @@
               <div class="marquee-container-v w-1/2">
                 <div class="marquee-wrapper-v reverse">
                   <div class="flex-shrink-0 flex flex-col gap-4">
-                    <img src="https://i.ibb.co/q1YxXzV/privileges-6.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/n6v36d1/privileges-3.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/3Wf4j6z/soft-skills.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=150&fit=crop&crop=center" alt="Pangsit Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&h=150&fit=crop&crop=center" alt="Tea Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=200&h=150&fit=crop&crop=center" alt="Noodle Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=200&h=150&fit=crop&crop=center" alt="Dessert Menu" class="w-full rounded-2xl object-cover" />
                   </div>
                   <div class="flex-shrink-0 flex flex-col gap-4">
-                    <img src="https://i.ibb.co/q1YxXzV/privileges-6.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/n6v36d1/privileges-3.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/3Wf4j6z/soft-skills.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=150&fit=crop&crop=center" alt="Pangsit Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&h=150&fit=crop&crop=center" alt="Tea Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=200&h=150&fit=crop&crop=center" alt="Noodle Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=200&h=150&fit=crop&crop=center" alt="Dessert Menu" class="w-full rounded-2xl object-cover" />
                   </div>
                 </div>
               </div>
@@ -671,19 +761,20 @@
       </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 lg:px-12 bg-white text-center">
-      <div class="container mx-auto">
-        <p class="text-green-500 font-semibold mb-2">Become Freelancer</p>
 
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-800 mb-12">
-          Kelas BuildWithAngga Unggulan <br class="hidden sm:block" />
-          Belajar Design & Development
+  <section class="py-20 px-4 sm:px-6 lg:px-12 text-center">
+      <div class="container mx-auto">
+        <p class="text-green-500 font-semibold mb-2 text-start">Best Seller Menu</p>
+
+        <h2 class="text-3xl font-bold text-gray-800 mb-12 text-start">
+          Menu Terfavorit Golden Dragon <br class="hidden sm:block" />
+          Pilihan Pelanggan Setia
         </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="bg-white rounded-3xl overflow-hidden">
             <div class="card-image-container">
-              <img src="https://i.ibb.co/6y18r6f/choose-roadmap.png" alt="Card Image" class="w-full h-auto rounded-t-3xl" />
+              <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=300&h=200&fit=crop&crop=center" alt="Siomay Special" class="w-full h-auto rounded-t-3xl object-cover" />
               <div class="card-image-overlay">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4.053a1 1 0 001.555.832l3.86-2.027a1 1 0 000-1.664l-3.86-2.027z" clip-rule="evenodd" />
@@ -691,31 +782,41 @@
               </div>
             </div>
             <div class="p-6 text-left">
-              <h3 class="font-bold text-lg text-gray-800">Full-Stack Javascript MERN 2025: Web Course LMS</h3>
-              <p class="text-gray-500 text-sm mt-1">Rp 550,000</p>
+              <h3 class="font-bold text-lg text-gray-800 h-[56px] line-clamp-2">Paket Siomay Special Golden Dragon</h3>
+              <p class="text-gray-500 text-sm mt-1">Rp 65,000</p>
             </div>
             <div class="p-6 flex items-center justify-between">
               <div class="flex items-center text-yellow-400 text-sm">
-                <span class="flex">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
+                <span class="flex items-center gap-1">
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
                 </span>
-                <span class="ml-2 text-gray-500 text-sm">(50)</span>
+                <span class="ml-2 text-gray-500 text-sm">(287)</span>
               </div>
-              <div class="text-blue-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-90" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                  <path d="M5 20h2v-4h-2v4zm4 0h2v-8h-2v8zm4 0h2v-12h-2v12zm4 0h2v-16h-2v16z" />
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="18" width="7" height="14" rx="3.5" fill="#506FFF"/>
+                <rect x="12" y="9" width="8" height="23" rx="4" fill="#506FFF"/>
+                <rect x="24" width="7" height="32" rx="3.5" fill="#506FFF"/>
                 </svg>
-              </div>
             </div>
           </div>
 
-          <div class="bg-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="bg-white rounded-3xl overflow-hidden">
             <div class="card-image-container">
-              <img src="https://i.ibb.co/6y18r6f/choose-roadmap.png" alt="Card Image" class="w-full h-auto rounded-t-3xl" />
+              <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=300&h=200&fit=crop&crop=center" alt="Hakau Premium" class="w-full h-auto rounded-t-3xl object-cover" />
               <div class="card-image-overlay">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4.053a1 1 0 001.555.832l3.86-2.027a1 1 0 000-1.664l-3.86-2.027z" clip-rule="evenodd" />
@@ -723,31 +824,51 @@
               </div>
             </div>
             <div class="p-6 text-left">
-              <h3 class="font-bold text-lg text-gray-800">Full-Stack Next JS Laravel 11: Web Langganan Catering</h3>
-              <p class="text-gray-500 text-sm mt-1">Rp 690,000</p>
+              <h3 class="font-bold text-lg text-gray-800 h-[56px] line-clamp-2">Hakau Udang Premium Golden Dragon</h3>
+              <p class="text-gray-500 text-sm mt-1">Rp 78,000</p>
             </div>
             <div class="p-6 flex items-center justify-between">
               <div class="flex items-center text-yellow-400 text-sm">
-                <span class="flex">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
+                <span class="flex items-center gap-1">
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
                 </span>
-                <span class="ml-2 text-gray-500 text-sm">(45)</span>
+                <span class="ml-2 text-gray-500 text-sm">(193)</span>
               </div>
-              <div class="text-blue-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-90" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                  <path d="M5 20h2v-4h-2v4zm4 0h2v-8h-2v8zm4 0h2v-12h-2v12zm4 0h2v-16h-2v16z" />
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="18" width="7" height="14" rx="3.5" fill="#506FFF"/>
+                <rect x="12" y="9" width="8" height="23" rx="4" fill="#506FFF"/>
+                <rect x="24" width="7" height="32" rx="3.5" fill="#506FFF"/>
                 </svg>
-              </div>
             </div>
           </div>
 
-          <div class="bg-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="bg-white rounded-3xl overflow-hidden">
             <div class="card-image-container">
-              <img src="https://i.ibb.co/6y18r6f/choose-roadmap.png" alt="Card Image" class="w-full h-auto rounded-t-3xl" />
+              <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=300&h=200&fit=crop&crop=center" alt="Lumpia Mix" class="w-full h-auto rounded-t-3xl object-cover" />
               <div class="card-image-overlay">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4.053a1 1 0 001.555.832l3.86-2.027a1 1 0 000-1.664l-3.86-2.027z" clip-rule="evenodd" />
@@ -755,31 +876,51 @@
               </div>
             </div>
             <div class="p-6 text-left">
-              <h3 class="font-bold text-lg text-gray-800">Full Stack Developer: Membangun Website Perpustakaan</h3>
-              <p class="text-gray-500 text-sm mt-1">Rp 890,000</p>
+              <h3 class="font-bold text-lg text-gray-800 h-[56px] line-clamp-2">Paket Lumpia Mix Crispy Special</h3>
+              <p class="text-gray-500 text-sm mt-1">Rp 95,000</p>
             </div>
             <div class="p-6 flex items-center justify-between">
               <div class="flex items-center text-yellow-400 text-sm">
-                <span class="flex">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
+                <span class="flex items-center gap-1">
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
                 </span>
-                <span class="ml-2 text-gray-500 text-sm">(283)</span>
+                <span class="ml-2 text-gray-500 text-sm">(156)</span>
               </div>
-              <div class="text-blue-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-90" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                  <path d="M5 20h2v-4h-2v4zm4 0h2v-8h-2v8zm4 0h2v-12h-2v12zm4 0h2v-16h-2v16z" />
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="18" width="7" height="14" rx="3.5" fill="#506FFF"/>
+                <rect x="12" y="9" width="8" height="23" rx="4" fill="#506FFF"/>
+                <rect x="24" width="7" height="32" rx="3.5" fill="#506FFF"/>
                 </svg>
-              </div>
             </div>
           </div>
 
-          <div class="bg-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="bg-white rounded-3xl overflow-hidden">
             <div class="card-image-container">
-              <img src="https://i.ibb.co/6y18r6f/choose-roadmap.png" alt="Card Image" class="w-full h-auto rounded-t-3xl" />
+              <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=300&h=200&fit=crop&crop=center" alt="Bao Combo" class="w-full h-auto rounded-t-3xl object-cover" />
               <div class="card-image-overlay">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4.053a1 1 0 001.555.832l3.86-2.027a1 1 0 000-1.664l-3.86-2.027z" clip-rule="evenodd" />
@@ -787,59 +928,80 @@
               </div>
             </div>
             <div class="p-6 text-left">
-              <h3 class="font-bold text-lg text-gray-800">Full-Stack Laravel 11 React TypeScript: Web Book</h3>
-              <p class="text-gray-500 text-sm mt-1">Rp 550,000</p>
+              <h3 class="font-bold text-lg text-gray-800 h-[56px] line-clamp-2">Bao Combo: Char Siu & Custard</h3>
+              <p class="text-gray-500 text-sm mt-1">Rp 68,000</p>
             </div>
+            
             <div class="p-6 flex items-center justify-between">
               <div class="flex items-center text-yellow-400 text-sm">
-                <span class="flex">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.69-.921 1.99 0l.974 2.99a1 1 0 00.95.69h3.14c.963 0 1.353 1.258.583 1.81l-2.54 1.84a1 1 0 00-.363 1.118l.974 2.99c.3.921-.755 1.688-1.523 1.118l-2.54-1.84a1 1 0 00-1.176 0l-2.54 1.84c-.768.57-1.822-.197-1.523-1.118l.974-2.99a1 1 0 00-.363-1.118l-2.54-1.84c-.77-.552-.38-1.81.583-1.81h3.14a1 1 0 00.95-.69l.974-2.99z" /></svg>
+                <span class="flex items-center gap-1">
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
+                  
+                    <svg width="16" height="16" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5734 1.39058C14.0224 0.00861265 15.9776 0.00861043 16.4266 1.39058L18.7045 8.40122C18.9053 9.01925 19.4812 9.43769 20.1311 9.43769H27.5025C28.9556 9.43769 29.5597 11.2971 28.3842 12.1512L22.4206 16.484C21.8948 16.866 21.6748 17.5431 21.8757 18.1611L24.1535 25.1717C24.6026 26.5537 23.0209 27.7029 21.8453 26.8488L15.8817 22.516C15.3559 22.134 14.6441 22.134 14.1183 22.516L8.15471 26.8488C6.97914 27.7029 5.39742 26.5537 5.84645 25.1717L8.12435 18.1611C8.32516 17.5431 8.10517 16.866 7.57944 16.484L1.61583 12.1512C0.440262 11.2971 1.04442 9.43769 2.49751 9.43769H9.86893C10.5188 9.43769 11.0947 9.01925 11.2955 8.40122L13.5734 1.39058Z" fill="#F4A42B"/>
+                    </svg>
+
                 </span>
-                <span class="ml-2 text-gray-500 text-sm">(140)</span>
+                <span class="ml-2 text-gray-500 text-sm">(201)</span>
               </div>
-              <div class="text-blue-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-90" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                  <path d="M5 20h2v-4h-2v4zm4 0h2v-8h-2v8zm4 0h2v-12h-2v12zm4 0h2v-16h-2v16z" />
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="18" width="7" height="14" rx="3.5" fill="#506FFF"/>
+                <rect x="12" y="9" width="8" height="23" rx="4" fill="#506FFF"/>
+                <rect x="24" width="7" height="32" rx="3.5" fill="#506FFF"/>
                 </svg>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 lg:px-12 bg-gray-100">
-      <div class="container mx-auto">
-        <div class="relative bg-[#0c0c2e] text-white p-8 md:p-12 lg:p-16 rounded-3xl overflow-hidden shadow-2xl">
-          <div class="absolute inset-0 z-0 opacity-10" style="background: radial-gradient(ellipse at 15% 15%, rgba(255, 255, 255, 0.2), transparent), radial-gradient(ellipse at 85% 85%, rgba(255, 255, 255, 0.1), transparent)"></div>
+    <section class="py-20">
+      <div class="">
+        <div class="relative bg-[#0c0c2e] text-white px-8 md:px-12 lg:px-16 shadow-2xl">
 
-          <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div class="lg:w-1/2 text-center lg:text-left">
-              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">Gabung Kelas Gratis, Perkuat Fundamental Skills</h2>
-              <p class="mt-4 text-gray-300 text-sm sm:text-base">Mentor expert kami juga telah menyediakan ratusan kelas gratis yang bisa kamu pelajari sekarang</p>
+          <div class="relative container mx-auto z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left pl-[64px]">
+              <p class="text-green-500 font-semibold">Rasa Super Lezat</p>
+              <h2 class="text-3xl font-bold leading-tight mt-2">Rasakan Kelezatan Dimsum <br> Otentik yang Dibuat dengan Hati</h2>
+              <p class="mt-4 text-gray-300 text-sm sm:text-base">Setiap hidangan dibuat dari bahan-bahan premium <br> dan resep turun-temurun untuk menghadirkan <br> pengalaman kuliner yang tak terlupakan.</p>
               <div class="mt-8 flex justify-center lg:justify-start">
-                <a href="#" class="bg-blue-600 text-white font-medium py-3 px-8 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"> Lihat Kelas Gratis Popular </a>
+                <a href="#" class="bg-[#2447f9] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:ring-2 hover:ring-blue-600"> Lihat Menu Lengkap Kami </a>
               </div>
             </div>
 
-            <div class="lg:w-1/2 w-full mt-12 lg:mt-0 flex flex-row gap-4 items-center justify-center overflow-hidden h-[400px]">
+            <div class="lg:w-1/2 w-full mt-12 lg:mt-0 flex pr-[64px] flex-row gap-4 items-center justify-center overflow-hidden h-[400px]">
               <div class="marquee-container-v w-1/2">
                 <div class="marquee-wrapper-v">
                   <div class="flex-shrink-0 flex flex-col gap-4">
-                    <img src="https://i.ibb.co/L5hYhB4/privileges-1.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/m0fW02T/privileges-4.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/hC82f8X/privileges-5.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=150&fit=crop&crop=center" alt="Dimsum Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=150&fit=crop&crop=center" alt="Hakau Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=200&h=150&fit=crop&crop=center" alt="Lumpia Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=200&h=150&fit=crop&crop=center" alt="Bakpao Menu" class="w-full rounded-2xl object-cover" />
                   </div>
                   <div class="flex-shrink-0 flex flex-col gap-4">
-                    <img src="https://i.ibb.co/L5hYhB4/privileges-1.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/m0fW02T/privileges-4.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/hC82f8X/privileges-5.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=150&fit=crop&crop=center" alt="Dimsum Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=150&fit=crop&crop=center" alt="Hakau Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=200&h=150&fit=crop&crop=center" alt="Lumpia Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=200&h=150&fit=crop&crop=center" alt="Bakpao Menu" class="w-full rounded-2xl object-cover" />
                   </div>
                 </div>
               </div>
@@ -847,16 +1009,16 @@
               <div class="marquee-container-v w-1/2">
                 <div class="marquee-wrapper-v reverse">
                   <div class="flex-shrink-0 flex flex-col gap-4">
-                    <img src="https://i.ibb.co/q1YxXzV/privileges-6.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/n6v36d1/privileges-3.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/3Wf4j6z/soft-skills.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=150&fit=crop&crop=center" alt="Pangsit Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&h=150&fit=crop&crop=center" alt="Tea Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=200&h=150&fit=crop&crop=center" alt="Noodle Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=200&h=150&fit=crop&crop=center" alt="Dessert Menu" class="w-full rounded-2xl object-cover" />
                   </div>
                   <div class="flex-shrink-0 flex flex-col gap-4">
-                    <img src="https://i.ibb.co/q1YxXzV/privileges-6.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/n6v36d1/privileges-3.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/f493YdC/privileges-2.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
-                    <img src="https://i.ibb.co/3Wf4j6z/soft-skills.png" alt="Gambar Aplikasi" class="w-full rounded-2xl" />
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=150&fit=crop&crop=center" alt="Pangsit Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&h=150&fit=crop&crop=center" alt="Tea Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=200&h=150&fit=crop&crop=center" alt="Noodle Menu" class="w-full rounded-2xl object-cover" />
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=200&h=150&fit=crop&crop=center" alt="Dessert Menu" class="w-full rounded-2xl object-cover" />
                   </div>
                 </div>
               </div>
@@ -866,84 +1028,73 @@
       </div>
     </section>
 
-    <!-- Section: Tanya BuildWithAngga -->
-    <section class="py-20 px-4 sm:px-6 lg:px-12 bg-white text-center">
+  
+    <section class="py-20 px-4 sm:px-6 lg:px-12 text-center">
       <div class="container mx-auto">
-        <!-- Konten 1: Teks "Tanya BuildWithAngga" -->
-        <p class="text-green-500 font-semibold mb-2">Tanya BuildWithAngga</p>
+        <p class="text-green-500 font-semibold mb-2">Tanya Dimsum Terbaik</p>
 
-        <!-- Konten 2: Heading -->
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-800 mb-12 flex items-center justify-center">
-          Frequently Asked Questions
-          <img src="https://i.ibb.co/3Wf4j6z/soft-skills.png" alt="FAQ Icon" class="h-10 w-auto ml-4" />
+        <h2 class="text-3xl font-bold text-gray-800 leading-[40px] mb-12">
+          Pertanyaan yang <br> Sering Diajukan😊
         </h2>
 
-        <!-- Konten 3: QnA List -->
         <div class="flex flex-col lg:flex-row justify-center gap-8">
-          <!-- QnA Kolom Kiri -->
           <div class="lg:w-1/2 flex flex-col gap-4">
-            <!-- QnA Item 1 -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-105" onclick="toggleDropdown(this)">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Apakah sertifikat dari BuildWithAngga valid?</h3>
-                <svg class="h-6 w-6 text-gray-500 icon-transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="bg-white p-6 rounded-2xl shadow-xs cursor-pointer transition-all duration-300">
+              <button type="button" data-expand="J-1" class="flex w-full justify-between items-center">
+                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Apakah dimsum ini halal?</h3>
+                <svg class="h-6 w-6 text-[#2447f9] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                 </svg>
-              </div>
-              <div class="faq-content mt-4">
-                <p class="text-gray-600 text-left">Sertifikat dari BuildWithAngga divalidasi oleh Kementerian Komunikasi dan Informatika (Kominfo). Ini memastikan bahwa sertifikat kami diakui dan memiliki nilai dalam industri.</p>
+              </button>
+              <div id="J-1" class="mt-4 hidden">
+                <p class="text-gray-600 text-left">Ya, semua bahan yang kami gunakan sudah bersertifikasi halal dan proses pembuatannya pun terjamin kebersihannya.</p>
               </div>
             </div>
-            <!-- QnA Item 2 -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-105" onclick="toggleDropdown(this)">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Apa saja persyaratan untuk bergabung dengan kelas?</h3>
-                <svg class="h-6 w-6 text-gray-500 icon-transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="bg-white p-6 rounded-2xl shadow-xs cursor-pointer transition-all duration-300">
+              <button type="button" data-expand="J-2" class="flex w-full justify-between items-center">
+                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Apakah bisa pesan untuk acara khusus?</h3>
+                <svg class="h-6 w-6 text-[#2447f9] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                 </svg>
-              </div>
-              <div class="faq-content mt-4">
-                <p class="text-gray-600 text-left">Tidak ada persyaratan khusus! Semua kelas kami dirancang untuk pemula hingga tingkat lanjut. Anda hanya perlu semangat belajar dan koneksi internet yang stabil.</p>
+              </button>
+              <div id="J-2" class="mt-4 hidden">
+                <p class="text-gray-600 text-left">Tentu! Kami melayani pesanan dalam jumlah besar untuk acara pernikahan, ulang tahun, atau pertemuan kantor. Silakan hubungi tim kami untuk informasi lebih lanjut.</p>
               </div>
             </div>
-            <!-- QnA Item 3 -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-105" onclick="toggleDropdown(this)">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Apakah ada kelas gratis?</h3>
-                <svg class="h-6 w-6 text-gray-500 icon-transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="bg-white p-6 rounded-2xl shadow-xs cursor-pointer transition-all duration-300">
+              <button type="button" data-expand="J-3" class="flex w-full justify-between items-center">
+                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Bagaimana cara memesan dimsum?</h3>
+                <svg class="h-6 w-6 text-[#2447f9] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                 </svg>
-              </div>
-              <div class="faq-content mt-4">
-                <p class="text-gray-600 text-left">Ya, kami memiliki banyak kelas gratis yang bisa Anda ikuti. Silakan cek bagian "Gabung Kelas Gratis" di website kami untuk menemukan kelas-kelas yang populer dan bermanfaat.</p>
+              </button>
+              <div id="J-3" class="mt-4 hidden">
+                <p class="text-gray-600 text-left">Anda bisa memesan langsung melalui website kami atau platform pesan antar makanan seperti GoFood, GrabFood, dan ShopeeFood. Anda juga bisa mengunjungi toko kami.</p>
               </div>
             </div>
           </div>
 
-          <!-- QnA Kolom Kanan -->
           <div class="lg:w-1/2 flex flex-col gap-4">
-            <!-- QnA Item 4 -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-105" onclick="toggleDropdown(this)">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Apa benefit utama bergabung dengan member?</h3>
-                <svg class="h-6 w-6 text-gray-500 icon-transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="bg-white p-6 rounded-2xl shadow-xs cursor-pointer transition-all duration-300">
+              <button type="button" data-expand="J-4" class="flex w-full justify-between items-center">
+                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Apakah ada pilihan dimsum vegetarian?</h3>
+                <svg class="h-6 w-6 text-[#2447f9] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                 </svg>
-              </div>
-              <div class="faq-content mt-4">
-                <p class="text-gray-600 text-left">Dengan bergabung sebagai member, Anda akan mendapatkan akses ke semua kelas kami selamanya, materi update gratis, proyek real-world, dan akses ke forum eksklusif.</p>
+              </button>
+              <div id="J-4" class="mt-4 hidden">
+                <p class="text-gray-600 text-left">Ya, kami menyediakan beberapa menu dimsum khusus vegetarian yang terbuat dari jamur dan sayuran segar, tanpa menggunakan daging.</p>
               </div>
             </div>
-            <!-- QnA Item 5 -->
-            <div class="bg-white p-6 rounded-2xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-105" onclick="toggleDropdown(this)">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Apakah ada komunitas yang bisa saya gabung?</h3>
-                <svg class="h-6 w-6 text-gray-500 icon-transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="bg-white p-6 rounded-2xl shadow-xs cursor-pointer transition-all duration-300">
+              <button type="button" data-expand="J-5" class="flex w-full justify-between items-center">
+                <h3 class="font-semibold text-lg text-gray-800 text-left pr-4">Berapa lama dimsum bisa disimpan?</h3>
+                <svg class="h-6 w-6 text-[#2447f9] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                 </svg>
-              </div>
-              <div class="faq-content mt-4">
-                <p class="text-gray-600 text-left">Tentu! Kami memiliki forum dan grup komunitas yang aktif di mana Anda bisa bertanya, berdiskusi, dan berjejaring dengan sesama pembelajar dan mentor.</p>
+              </button>
+              <div id="J-5" class="mt-4 hidden">
+                <p class="text-gray-600 text-left">Dimsum beku kami dapat disimpan di freezer hingga satu bulan. Pastikan dimsum tertutup rapat untuk menjaga kualitas dan rasanya.</p>
               </div>
             </div>
           </div>
@@ -951,178 +1102,151 @@
       </div>
     </section>
 
-    <!-- Section: Sharing is Caring -->
 <section class="py-20 px-6 lg:px-12 bg-gray-50">
   <div class="container mx-auto flex flex-col lg:flex-row items-center gap-12">
     
-    <!-- Konten Kiri (Gambar) -->
     <div class="lg:w-1/2 flex justify-center">
-      <img src="https://i.ibb.co/8xMczHc/mentor-example.png" alt="Mentor Image" class="w-full max-w-md rounded-2xl shadow-xl">
+      <img src="https://plus.unsplash.com/premium_photo-1661778091956-15dbe6e47442?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chef Preparing Dimsum" class="w-full max-w-md rounded-2xl shadow-xl">
     </div>
 
-    <!-- Konten Kanan (Teks) -->
     <div class="lg:w-1/2 flex flex-col gap-6">
       
-      <!-- Anak 1 -->
-      <p class="text-green-500 font-semibold">Sharing is Caring.</p>
+      <p class="text-green-500 font-semibold">Resep Autentik Sejak Dulu.</p>
       
-      <!-- Anak 2 -->
       <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
-        Gabung Sebagai Mentor. <br> Bagikan Skills & Pengalamanmu.
+        Rahasia Kelezatan yang Kami Jaga. <br> Dari Generasi ke Generasi.
       </h2>
       
-      <!-- Anak 3 (List) -->
       <ul class="flex flex-col gap-4 text-gray-700">
         <li class="flex items-center gap-3">
-          <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#DEF6EE"></circle>
+          <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
-          <span>Meningkatkan personal branding</span>
+          <span>Menggunakan bahan-bahan segar pilihan</span>
         </li>
         <li class="flex items-center gap-3">
-          <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#DEF6EE"></circle>
+          <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
-          <span>Menambah sumber income</span>
+          <span>Resep rahasia turun-temurun</span>
         </li>
         <li class="flex items-center gap-3">
-          <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#DEF6EE"></circle>
+          <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
-          <span>Menambah networking terbaru</span>
+          <span>Proses pembuatan yang higienis</span>
         </li>
         <li class="flex items-center gap-3">
-          <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#DEF6EE"></circle>
+          <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
-          <span>Mendapatkan projek freelance</span>
+          <span>Diolah oleh koki profesional</span>
         </li>
         <li class="flex items-center gap-3">
-          <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#DEF6EE"></circle>
+          <path d="M7 12L10.1579 15L17 9" stroke="#22C58B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
-          <span>Privileges menarik mentor lainnya</span>
+          <span>Menghadirkan cita rasa yang konsisten</span>
         </li>
       </ul>
       
-      <!-- Anak 4 -->
       <a href="#"
-         class="inline-block bg-blue-600 text-white font-medium py-3 px-8 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg w-fit">
-        Pelajari selengkapnya
+          class="bg-[#2447f9] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:ring-2 hover:ring-blue-600 w-fit">
+        Cari Tahu Lebih Lanjut
       </a>
     </div>
   </div>
 </section>
 
-<!-- Section: Footer -->
 <footer class="bg-gray-50 text-gray-700 py-16 px-6 lg:px-12">
   <div class="container mx-auto flex flex-col lg:flex-row justify-between gap-12">
     
-    <!-- Konten Kiri -->
     <div class="lg:w-1/3 flex flex-col gap-3">
-      <!-- Anak 1: Logo -->
-      <img src="https://i.ibb.co/fMXJdDY/logo.png" alt="Logo" class="w-10 h-10 mb-4">
+      <img src="https://plus.unsplash.com/premium_photo-1668902224017-4b131fe72ffd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo Dimsum Jakarta" class="w-10 h-10 mb-4 rounded-full">
 
-      <!-- Anak 2 -->
-      <p>PT. Angga Membangun Indonesia</p>
+      <p>PT. Dimsum Jakarta</p>
 
-      <!-- Anak 3 -->
-      <p>Jl. KH. Wahid Hasyim Kel No.10D</p>
+      <p>Jl. Jend. Sudirman Kav. 52-53</p>
 
-      <!-- Anak 4 -->
-      <p>Jakarta, Indonesia</p>
+      <p>Jakarta Selatan, DKI Jakarta</p>
 
-      <!-- Anak 5 -->
-      <p>+62877-7891-9943 (WhatsApp)</p>
+      <p>+62812-3456-7890 (WhatsApp)</p>
 
-      <!-- Anak 6 -->
-      <p>team@buildwithangga.com</p>
+      <p>info@dimsumjakarta.com</p>
 
-      <!-- Anak 7 -->
-      <p class="text-sm text-gray-500">© 2019–2025 BuildWithAngga</p>
+      <p class="text-sm text-gray-500">© 2024 Dimsum Jakarta. All rights reserved.</p>
     </div>
 
-    <!-- Konten Kanan -->
     <div class="lg:w-2/3 flex flex-col gap-10">
 
-      <!-- Anak 1: Grid 3 Kolom -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Col 1 -->
         <div>
-          <h4 class="font-semibold mb-3">Start Popular Career</h4>
+          <h4 class="font-semibold mb-3">Menu Populer</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class="hover:text-blue-600">UI/UX Designer</a></li>
-            <li><a href="#" class="hover:text-blue-600">Web Developer</a></li>
-            <li><a href="#" class="hover:text-blue-600">Mobile Developer</a></li>
-            <li><a href="#" class="hover:text-blue-600">Data Scientist</a></li>
-            <li><a href="#" class="hover:text-blue-600">Digital Marketer</a></li>
+            <li><a href="#" class="hover:text-blue-600">Hakau Udang</a></li>
+            <li><a href="#" class="hover:text-blue-600">Siomay Ayam</a></li>
+            <li><a href="#" class="hover:text-blue-600">Bakpao Kukus</a></li>
+            <li><a href="#" class="hover:text-blue-600">Ceker Ayam</a></li>
+            <li><a href="#" class="hover:text-blue-600">Lumpia Udang</a></li>
           </ul>
         </div>
-        <!-- Col 2 -->
         <div>
-          <h4 class="font-semibold mb-3">Mastering Hot Tools</h4>
+          <h4 class="font-semibold mb-3">Varian Dimsum</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class="hover:text-blue-600">Figma</a></li>
-            <li><a href="#" class="hover:text-blue-600">Next JS</a></li>
-            <li><a href="#" class="hover:text-blue-600">React JS</a></li>
-            <li><a href="#" class="hover:text-blue-600">Laravel</a></li>
-            <li><a href="#" class="hover:text-blue-600">Vue JS</a></li>
+            <li><a href="#" class="hover:text-blue-600">Dimsum Kukus</a></li>
+            <li><a href="#" class="hover:text-blue-600">Dimsum Goreng</a></li>
+            <li><a href="#" class="hover:text-blue-600">Dimsum Beku</a></li>
+            <li><a href="#" class="hover:text-blue-600">Dimsum Manis</a></li>
+            <li><a href="#" class="hover:text-blue-600">Dimsum Premium</a></li>
           </ul>
         </div>
-        <!-- Col 3 -->
         <div>
-          <h4 class="font-semibold mb-3">Learn Language</h4>
+          <h4 class="font-semibold mb-3">Tentang Kami</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class="hover:text-blue-600">PHP</a></li>
-            <li><a href="#" class="hover:text-blue-600">JavaScript</a></li>
-            <li><a href="#" class="hover:text-blue-600">Dart</a></li>
-            <li><a href="#" class="hover:text-blue-600">HTML & CSS</a></li>
-            <li><a href="#" class="hover:text-blue-600">Kotlin</a></li>
+            <li><a href="#" class="hover:text-blue-600">Sejarah</a></li>
+            <li><a href="#" class="hover:text-blue-600">Toko Kami</a></li>
+            <li><a href="#" class="hover:text-blue-600">Karir</a></li>
           </ul>
         </div>
       </div>
 
-      <!-- Anak 2: Grid 4 Kolom -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
-        <!-- Col 1 -->
         <div>
-          <h4 class="font-semibold mb-3">Resources</h4>
+          <h4 class="font-semibold mb-3">Layanan</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class="hover:text-blue-600">Karir HandBook</a></li>
-            <li><a href="#" class="hover:text-blue-600">Student Rewards</a></li>
-            <li><a href="#" class="hover:text-blue-600">Tips Mentor</a></li>
+            <li><a href="#" class="hover:text-blue-600">Pesan Online</a></li>
+            <li><a href="#" class="hover:text-blue-600">Reservasi</a></li>
+            <li><a href="#" class="hover:text-blue-600">Catering</a></li>
           </ul>
         </div>
-        <!-- Col 2 -->
         <div>
-          <h4 class="font-semibold mb-3">Community</h4>
+          <h4 class="font-semibold mb-3">Informasi</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class="hover:text-blue-600">Showcase</a></li>
-            <li><a href="#" class="hover:text-blue-600">Testimonials</a></li>
+            <li><a href="#" class="hover:text-blue-600">Blog & Resep</a></li>
+            <li><a href="#" class="hover:text-blue-600">Promo</a></li>
           </ul>
         </div>
-        <!-- Col 3 -->
         <div>
-          <h4 class="font-semibold mb-3">Company</h4>
+          <h4 class="font-semibold mb-3">Ikuti Kami</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class="hover:text-blue-600">About</a></li>
-            <li><a href="#" class="hover:text-blue-600">Contact</a></li>
-            <li><a href="#" class="hover:text-blue-600">Youtube</a></li>
+            <li><a href="#" class="hover:text-blue-600">Facebook</a></li>
             <li><a href="#" class="hover:text-blue-600">Instagram</a></li>
             <li><a href="#" class="hover:text-blue-600">TikTok</a></li>
+            <li><a href="#" class="hover:text-blue-600">Twitter</a></li>
           </ul>
         </div>
-        <!-- Col 4 -->
         <div>
-          <h4 class="font-semibold mb-3">Useful Links</h4>
+          <h4 class="font-semibold mb-3">Bantuan</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class="hover:text-blue-600">Privacy & Policy</a></li>
-            <li><a href="#" class="hover:text-blue-600">Terms & Conditions</a></li>
-            <li><a href="#" class="hover:text-blue-600">Jam Operasional</a></li>
-            <li><a href="#" class="hover:text-blue-600">Cari Kelas</a></li>
-            <li><a href="#" class="hover:text-blue-600">Roadmap Belajar</a></li>
-            <li><a href="#" class="hover:text-blue-600">All Courses</a></li>
-            <li><a href="#" class="hover:text-blue-600">Cek Sertifikat</a></li>
+            <li><a href="#" class="hover:text-blue-600">FAQ</a></li>
+            <li><a href="#" class="hover:text-blue-600">Kebijakan Privasi</a></li>
+            <li><a href="#" class="hover:text-blue-600">Syarat & Ketentuan</a></li>
+            <li><a href="#" class="hover:text-blue-600">Kontak Kami</a></li>
           </ul>
         </div>
       </div>
@@ -1131,9 +1255,10 @@
 </footer>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/6287778919943" 
+<a href="https://wa.me/628777777777" 
    target="_blank"
-   class="fixed bottom-6 right-6 flex items-center gap-2 bg-green-500 text-white font-semibold px-5 py-3 rounded-full shadow-lg hover:bg-green-600 transition">
+   class="fixed z-50 bottom-6 right-6 flex items-center gap-2 bg-green-500 text-white font-semibold px-5 py-3 rounded-full shadow-lg hover:bg-green-600 transition">
+   
    <!-- WhatsApp Icon (SVG) -->
    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
      <path d="M12 2C6.477 2 2 6.246 2 11.646c0 2.06.684 3.986 1.84 5.547L2 22l5.034-1.636A9.86 9.86 0 0 0 12 21c5.523 0 10-4.246 10-9.646S17.523 2 12 2Zm0 17.292c-1.67 0-3.272-.48-4.642-1.39l-.333-.212-2.99.97.987-2.917-.217-.338A7.583 7.583 0 0 1 4.417 11.7c0-4.03 3.394-7.305 7.583-7.305 4.19 0 7.584 3.275 7.584 7.305 0 4.03-3.394 7.592-7.584 7.592Zm3.988-5.609c-.216-.108-1.276-.63-1.474-.702-.197-.072-.341-.108-.485.108-.144.216-.557.702-.683.846-.126.144-.252.162-.468.054-.216-.108-.91-.335-1.734-1.068-.64-.57-1.07-1.272-1.196-1.488-.126-.216-.013-.333.095-.441.098-.097.216-.252.324-.378.107-.126.144-.216.216-.36.072-.144.036-.27-.018-.378-.054-.108-.485-1.164-.666-1.596-.176-.425-.356-.367-.485-.374-.126-.007-.27-.009-.414-.009s-.378.054-.576.27c-.197.216-.757.738-.757 1.8 0 1.062.775 2.088.883 2.232.108.144 1.527 2.34 3.7 3.285.517.223.92.356 1.234.456.518.165.99.142 1.364.086.416-.062 1.276-.52 1.456-1.022.18-.502.18-.93.126-1.022-.054-.092-.197-.144-.413-.252Z"/>
@@ -1141,29 +1266,18 @@
    <span>Konsultasi Kelas</span>
 </a>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+  
+$(() => {
+    $("[data-expand]").on("click", function (e) {
+        $(this).children("svg").toggleClass("-rotate-180");
+        let target = $(`#${$(this).data("expand")}`);
+        target.slideToggle();
+    });
+});
 
-    
-
-    <script>
-      function toggleDropdown(element) {
-        const content = element.querySelector(".faq-content");
-        const icon = element.querySelector(".icon-transition");
-
-        if (content.classList.contains("open")) {
-          content.classList.remove("open");
-          icon.classList.remove("rotate-45");
-        } else {
-          // Tutup semua dropdown lain
-          document.querySelectorAll(".faq-content.open").forEach((item) => {
-            item.classList.remove("open");
-            item.closest(".shadow-lg").querySelector(".icon-transition").classList.remove("rotate-45");
-          });
-          // Buka dropdown yang diklik
-          content.classList.add("open");
-          icon.classList.add("rotate-45");
-        }
-      }
-    </script>
+</script>
 
     <script>
       const navbar = document.getElementById("navbar");
